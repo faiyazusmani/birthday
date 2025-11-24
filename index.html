@@ -16,8 +16,6 @@
   <div class="top-controls">
     <div class="left-controls">
       <button id="toggleTheme" class="control-btn" aria-pressed="false" title="Toggle theme">🌙</button>
-      <button id="playMusic" class="control-btn" title="Play / Pause music">🔊</button>
-      <input id="musicVolume" type="range" min="0" max="1" step="0.01" value="0.6" title="Volume">
     </div>
     <div class="right-controls">
       <button id="surpriseBtn" class="control-ghost">Surprise 🎁</button>
@@ -34,7 +32,7 @@
     <!-- LEFT: candles (kept left side) -->
     <aside class="panel left-panel">
       <h2>Candles</h2>
-      <div class="candles" id="candles">
+      <div class="candles" id="candles" role="button" tabindex="0" aria-label="Blow candles — click here">
         <!-- 5 candles -->
         <div class="candle"><div class="flame"></div></div>
         <div class="candle"><div class="flame"></div></div>
@@ -42,7 +40,7 @@
         <div class="candle"><div class="flame"></div></div>
         <div class="candle"><div class="flame"></div></div>
       </div>
-      <p class="hint">Click anywhere to blow the candles — ek wish karo ✨</p>
+      <p class="hint">Click the candles to blow them — ek wish karo ✨</p>
 
       <div class="timer-block">
         <h3>Countdown</h3>
@@ -74,6 +72,11 @@
         </div>
       </div>
 
+      <!-- Added cake photo -->
+      <div class="cake-photo-wrap">
+        <img class="cake-photo" src="download.jpg" alt="Birthday cake">
+      </div>
+
       <h2 class="bigTitle">Dua Zamir</h2>
       <p class="subTitle">Wishing you a year full of love, laughter & success 💖</p>
 
@@ -81,9 +84,9 @@
 
       <!-- gallery -->
       <div class="gallery" id="gallery">
-        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=60" data-caption="That day we laughed a lot">
-        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=60" data-caption="Best selfie partner">
-        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=60" data-caption="Coffee dates ♡">
+        <img src="cake photo.jpg" data-caption="That day we laughed a lot" alt="photo 1">
+        <img src="images.jpg" data-caption="Best selfie partner" alt="photo 2">
+        <img src="download.jpg" data-caption="Coffee dates ♡" alt="photo 3">
       </div>
 
     </section>
@@ -124,10 +127,7 @@
     <p id="lbCaption"></p>
   </div>
 
-  <!-- Hidden media -->
-  <audio id="bgMusic" loop preload="auto">
-    <source src="https://assets.mixkit.co/sfx/preview/mixkit-happy-birthday-melody-2890.mp3" type="audio/mpeg">
-  </audio>
+  <!-- fireworks video (kept) -->
   <video id="fireworksV" loop muted preload="auto" style="display:none"
     src="https://assets.mixkit.co/videos/preview/mixkit_ds-fireworks-bursting-in-the-night-sky-4202-small.mp4"></video>
 
