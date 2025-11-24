@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday Dua Zamir ♡ — Faiyaz</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-dark">
+
+  <!-- Top controls -->
+  <div class="top-controls">
+    <div class="left-controls">
+      <button id="toggleTheme" class="control-btn" aria-pressed="false" title="Toggle theme">🌙</button>
+      <button id="playMusic" class="control-btn" title="Play / Pause music">🔊</button>
+      <input id="musicVolume" type="range" min="0" max="1" step="0.01" value="0.6" title="Volume">
+    </div>
+    <div class="right-controls">
+      <button id="surpriseBtn" class="control-ghost">Surprise 🎁</button>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <h1>Happy Birthday — <span class="name">Dua Zamir</span></h1>
+    <p class="subtitle">From your friend — <strong>Faiyaz Usmani</strong></p>
+  </header>
+
+  <main class="layout">
+
+    <!-- LEFT: candles (kept left side) -->
+    <aside class="panel left-panel">
+      <h2>Candles</h2>
+      <div class="candles" id="candles">
+        <!-- 5 candles -->
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+      </div>
+      <p class="hint">Click anywhere to blow the candles — ek wish karo ✨</p>
+
+      <div class="timer-block">
+        <h3>Countdown</h3>
+        <div id="countdown">Loading...</div>
+      </div>
+
+      <div class="hearts-note">
+        <p>Floating hearts & surprises — enjoy!</p>
+      </div>
+    </aside>
+
+    <!-- CENTER: Cake + gallery + typewriter -->
+    <section class="panel center-panel">
+
+      <div class="cake-wrap" aria-hidden="false">
+        <div class="cake" id="cake">
+          <div class="cake-layer layer-top"></div>
+          <div class="cake-layer layer-mid"></div>
+          <div class="cake-layer layer-base"></div>
+
+          <!-- candles placed visually on top -->
+          <div class="cake-candles">
+            <div class="mini-candle"><span class="mini-flame"></span></div>
+            <div class="mini-candle"><span class="mini-flame"></span></div>
+            <div class="mini-candle"><span class="mini-flame"></span></div>
+            <div class="mini-candle"><span class="mini-flame"></span></div>
+            <div class="mini-candle"><span class="mini-flame"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="bigTitle">Dua Zamir</h2>
+      <p class="subTitle">Wishing you a year full of love, laughter & success 💖</p>
+
+      <div class="typewriter" id="typewriter" aria-live="polite"></div>
+
+      <!-- gallery -->
+      <div class="gallery" id="gallery">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=60" data-caption="That day we laughed a lot">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=60" data-caption="Best selfie partner">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=60" data-caption="Coffee dates ♡">
+      </div>
+
+    </section>
+
+    <!-- RIGHT: Shayari & controls -->
+    <aside class="panel right-panel">
+      <h2>Shayari</h2>
+      <div class="shayari-box" id="shayariBox">
+        <p class="shayari-text">
+          ख़ुदा से एक ही दुआ मांगी है,<br>
+          तेरी ज़िंदगी में कभी उदासी न आए…<br>
+          तेरा हर कल आज से बेहतर हो,<br>
+          और तेरी मुस्कुराहट कभी कम न हो जाए।
+        </p>
+        <p class="signature">— Faiyaz</p>
+      </div>
+
+      <div class="socials">
+        <h3>Share Wishes</h3>
+        <button class="share-btn" id="shareWhats">WhatsApp</button>
+        <button class="share-btn" id="shareCopy">Copy Message</button>
+      </div>
+
+    </aside>
+  </main>
+
+  <!-- Footer centered -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Made with ❤️ by <strong>Faiyaz Usmani</strong></p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button id="closeLB" class="lb-close">×</button>
+    <img id="lbImg" alt="photo">
+    <p id="lbCaption"></p>
+  </div>
+
+  <!-- Hidden media -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="https://assets.mixkit.co/sfx/preview/mixkit-happy-birthday-melody-2890.mp3" type="audio/mpeg">
+  </audio>
+  <video id="fireworksV" loop muted preload="auto" style="display:none"
+    src="https://assets.mixkit.co/videos/preview/mixkit_ds-fireworks-bursting-in-the-night-sky-4202-small.mp4"></video>
+
+  <canvas id="confettiCanvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
